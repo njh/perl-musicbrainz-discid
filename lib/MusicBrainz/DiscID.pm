@@ -14,7 +14,7 @@ use strict;
 
 use vars qw/$VERSION/;
 
-$VERSION="0.01";
+$VERSION="0.02";
 
 XSLoader::load('MusicBrainz::DiscID', $VERSION);
 
@@ -69,6 +69,11 @@ sub id {
 sub last_track_num {
     my $self = shift;
     return MusicBrainz::DiscID::discid_get_last_track_num($self->{disc});
+}
+
+sub put {
+    my $self = shift;
+    return MusicBrainz::DiscID::discid_put($self->{disc}, @_);
 }
 
 sub read {
@@ -176,6 +181,12 @@ Returns undef if no ID was yet read.
 
 Return the number of the last track on this disc.
 Returns undef if no ID was yet read.
+
+=item $discid->put( $first_track, $sectors, $offset1, $offset2, ... )
+
+This function may be used if the TOC has been read earlier and you
+want to calculate the disc ID afterwards, without accessing the disc
+drive.
 
 =item $discid->read( [$device] )
 
