@@ -14,7 +14,7 @@ use strict;
 
 use vars qw/$VERSION/;
 
-$VERSION="0.02";
+$VERSION="0.03";
 
 XSLoader::load('MusicBrainz::DiscID', $VERSION);
 
