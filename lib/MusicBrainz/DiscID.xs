@@ -124,12 +124,13 @@ discid_put( disc, first_track, sectors, offsets ... )
   DiscId *disc
   int first_track
   int sectors
+  int n_items = items;
   PREINIT:
 	  int i, last_track, offsets[100];
   CODE:
-	  for (i=0;i<100;i++);
-	      offsets[i] = 0;
-    for (i=3; i<items; i++) {
+    memset(offsets, 0, sizeof(offsets));
+    if (items > 102 ) n_items = 102;  // rely on discid_put to return error
+    for (i=3; i<n_items; i++) {
         offsets[i-2] = (int)SvIV(ST(i));
     }
     offsets[0] = sectors;
