@@ -5,7 +5,7 @@ use strict;
 use Test::More;
 
 # use a BEGIN block so we print our plan before modules are loaded
-BEGIN { plan tests => 54 }
+BEGIN { plan tests => 56 }
 
 # load modules
 use MusicBrainz::DiscID;
@@ -16,6 +16,9 @@ my $disc = new MusicBrainz::DiscID();
 ok( $disc );
 is(ref $disc, 'MusicBrainz::DiscID');
 
+ok( !$disc->put( 1, 140, 1 .. 100 ) );
+
+like( $disc->error_msg, qr{Illegal (parameters|track limits)} );
 
 ok( $disc->put( 1, 303602,
                 150, 9700, 25887, 39297, 53795, 63735, 77517, 94877, 107270,
