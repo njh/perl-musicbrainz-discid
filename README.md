@@ -18,7 +18,7 @@ To install this module type the following:
 	
     perl Build.PL
     ./Build
-		./Build test
+    ./Build test
 		
 And then as root:
 	
