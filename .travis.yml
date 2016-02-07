@@ -1,5 +1,5 @@
 before_install:
-  - sudo apt-get install libdiscid-dev -y
+  - sudo apt-get install libdiscid0-dev -y
 language: perl
 perl:
   - "5.22"
