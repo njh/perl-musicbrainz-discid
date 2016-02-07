@@ -6,7 +6,7 @@ lib/MusicBrainz/DiscID.xs
 lib/MusicBrainz/typemap
 MANIFEST
 META.yml
-README
+README.md
 t/00use.t
 t/05pod.t
 t/10discid.t
