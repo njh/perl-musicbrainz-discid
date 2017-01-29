@@ -13,16 +13,16 @@ http://pkgconfig.freedesktop.org/
 INSTALLATION
 ------------
 
-I use Module::Build to build and install the module.
+I use ExtUtils::MakeMaker to build and install the module.
 To install this module type the following:
-	
-    perl Build.PL
-    ./Build
-    ./Build test
-		
+
+    perl Makefile.PL
+    make
+    make test
+
 And then as root:
-	
-    ./Build install
+
+    make install
 
 
 AUTHOR
