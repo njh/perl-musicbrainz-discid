@@ -31,8 +31,8 @@ is( $disc->first_track_num, 1);
 is( $disc->freedb_id, '370fce16');
 is( $disc->last_track_num, 22);
 is( $disc->sectors, 303602);
-is( $disc->submission_url, 'http://mm.musicbrainz.org/bare/cdlookup.html?id=xUp1F2NkfP8s8jaeFn_Av3jNEI4-&tracks=22&toc=1+22+303602+150+9700+25887+39297+53795+63735+77517+94877+107270+123552+135522+148422+161197+174790+192022+205545+218010+228700+239590+255470+266932+288750');
-is( $disc->webservice_url, 'http://mm.musicbrainz.org/ws/1/release?type=xml&discid=xUp1F2NkfP8s8jaeFn_Av3jNEI4-&toc=1+22+303602+150+9700+25887+39297+53795+63735+77517+94877+107270+123552+135522+148422+161197+174790+192022+205545+218010+228700+239590+255470+266932+288750');
+like( $disc->submission_url, qr{http://(mm\.musicbrainz\.org/bare/cdlookup\.html|musicbrainz\.org/cdtoc/attach)\?id=xUp1F2NkfP8s8jaeFn_Av3jNEI4-&tracks=22&toc=1\+22\+303602\+150\+9700\+25887\+39297\+53795\+63735\+77517\+94877\+107270\+123552\+135522\+148422\+161197\+174790\+192022\+205545\+218010\+228700\+239590\+255470\+266932\+288750});
+like( $disc->webservice_url, qr{http://(mm\.)?musicbrainz\.org/ws/1/release\?type=xml&discid=xUp1F2NkfP8s8jaeFn_Av3jNEI4-&toc=1\+22\+303602\+150\+9700\+25887\+39297\+53795\+63735\+77517\+94877\+107270\+123552\+135522\+148422\+161197\+174790\+192022\+205545\+218010\+228700\+239590\+255470\+266932\+288750});
 
 is( $disc->track_offset(1), 150);
 is( $disc->track_offset(2), 9700);
