@@ -102,11 +102,6 @@ sub track_length {
     return MusicBrainz::DiscID::discid_get_track_length($self->{disc}, $_[0]);
 }
 
-sub webservice_url {
-    my $self = shift;
-    return MusicBrainz::DiscID::discid_get_webservice_url($self->{disc});
-}
-
 sub DESTROY {
     my $self=shift;
     
@@ -212,11 +207,6 @@ Return the length of a track in sectors.
 =item $discid->track_offset( $track_num )
 
 Return the sector offset of a track.
-
-=item $discid->webservice_url()
-
-Returns a Webservice URL for the DiscID as a string.
-Returns undef if no ID was yet read.
 
 =back
 
