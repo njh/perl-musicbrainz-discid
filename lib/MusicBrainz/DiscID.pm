@@ -212,7 +212,7 @@ Return the sector offset of a track.
 
 =head1 SEE ALSO
 
-L<http://musicbrainz.org/doc/libdiscid>
+L<https://musicbrainz.org/doc/libdiscid>
 
 =head1 AUTHOR
 

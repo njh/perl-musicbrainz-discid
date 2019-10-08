@@ -4,10 +4,10 @@ libdiscid perl binding
 Perl binding for the libdiscid library.
 
 libdiscid library version 0.2.2 or higher is required.
-http://musicbrainz.org/doc/libdiscid
+https://musicbrainz.org/doc/libdiscid
 
 Pkg-config version 0.11 or higher is required:
-http://pkgconfig.freedesktop.org/
+https://pkgconfig.freedesktop.org/
 
 
 INSTALLATION
@@ -41,4 +41,4 @@ Contact
 
 
 
-[@njh]:           http://twitter.com/njh
+[@njh]:           https://twitter.com/njh
