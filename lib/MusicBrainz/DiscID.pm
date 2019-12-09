@@ -156,7 +156,7 @@ the read method.
 
 =item $discid->error_msg()
 
-Return a human-readable error message of the last error that occured.
+Return a human-readable error message of the last error that occurred.
 
 =item $discid->first_track_num()
 
