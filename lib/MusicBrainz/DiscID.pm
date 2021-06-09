@@ -127,7 +127,7 @@ MusicBrainz::DiscID - Perl interface for the MusicBrainz libdiscid library
   use MusicBrainz::DiscID;
 
   my $discid = MusicBrainz::DiscID->new();
-  if ( $disc->read() == 0 ) {
+  if ( $discid->read() == 0 ) {
       print STDERR "Error: " . $discid->error_msg() . "\n";
       exit(1);
   }
